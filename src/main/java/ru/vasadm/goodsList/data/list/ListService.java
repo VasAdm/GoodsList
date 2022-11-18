@@ -41,7 +41,6 @@ public class ListService {
     public Long addProductToList(String listId, ProductEntity product) {
         Optional<ListEntity> optionalList = listRepository.findById(listId);
 
-
         if (optionalList.isEmpty()) {
             return 0L;
         }

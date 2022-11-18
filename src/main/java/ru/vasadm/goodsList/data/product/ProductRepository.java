@@ -1,6 +1,7 @@
 package ru.vasadm.goodsList.data.product;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ProductRepository extends CrudRepository<ProductEntity, String> {
-}
+@Repository
+public interface ProductRepository extends MongoRepository<ProductEntity, String> {}

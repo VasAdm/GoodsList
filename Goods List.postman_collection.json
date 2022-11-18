@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "120a6054-7397-4b40-b5bb-c266a02ef4f1",
+		"name": "Goods List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18517572"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "GetAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/add?name=Tea&description='Black tea'&kcal=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"add"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Tea"
+								},
+								{
+									"key": "description",
+									"value": "'Black tea'"
+								},
+								{
+									"key": "kcal",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/6376814fb860fc6be76c55d8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"6376814fb860fc6be76c55d8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lists",
+			"item": [
+				{
+					"name": "GetAllLists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/lists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/list/63769b1d1b8eb849fe209813",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"list",
+								"63769b1d1b8eb849fe209813"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/list/add?name=firstList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"list",
+								"add"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "firstList"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProductToList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/list/addProduct?listId=63769b1d1b8eb849fe209813&productId=63769a2df2724750baf3a825",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"list",
+								"addProduct"
+							],
+							"query": [
+								{
+									"key": "listId",
+									"value": "63769b1d1b8eb849fe209813"
+								},
+								{
+									"key": "productId",
+									"value": "63769a2df2724750baf3a825"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -3,10 +3,9 @@ package ru.vasadm.goodsList.data.product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @Service
 public class ProductService {
@@ -22,7 +21,7 @@ public class ProductService {
     }
 
     public List<ProductEntity> getAll() {
-        return StreamSupport.stream(productRepository.findAll().spliterator(), false).collect(Collectors.toList());
+        return new ArrayList<>(productRepository.findAll());
     }
 
     public Optional<ProductEntity> get(String id) {
